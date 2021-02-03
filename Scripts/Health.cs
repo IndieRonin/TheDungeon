@@ -1,12 +1,16 @@
 using Godot;
 using System;
 
-public class Health : Node
+public class Health
 {
-    int health;
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+    public Health(int _health)
     {
-        
+        //Set the new health when created for the actor
+        health = _health;
+    }
+    int health;
+    private void TakeDamage(int damage)
+    {
+        health -= damage;
     }
 }

@@ -1,24 +1,19 @@
 using Godot;
 using System;
 
-public class Actor : Node
+public class Actor
 {
-    
     /*
-Strength
-Dexterity
+    Strength
+    Dexterity
+    Wisdom
+    Intelegence
 
+    Weapon
+    Armour
     */
-
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
-    {
-        
-    }
-
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    //The level of the actor
+    int level;
+    //The health of hte actor
+    Health health;
 }

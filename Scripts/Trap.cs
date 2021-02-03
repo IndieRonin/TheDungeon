@@ -1,11 +1,31 @@
 using Godot;
 using System;
 
-public class Monster : Actor
+public enum DamageType
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
+    //Physical
+    BLUNT,
+    PIERCING,
+    SLASHING,
+    //Magical
+    MAGICAL,
+    //Elemental (Sub class of magical)
+    FIRE,
+    EARTH,
+    WATER,
+    WIND
+};
+
+public class Trap
+{
+    /*
+    Damage Type
+    Damage Amount
+    Damage Time
+    Group Damage
+    */
+
+    int damage;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()

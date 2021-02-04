@@ -41,6 +41,12 @@ If the conflict is wn by the party they get the treasure, if they lost the treas
 
     }
 
+    //If the mob wins and there is no treasure it gets added to the room
+    private void AddTreasure()
+    {
+
+    }
+
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     //  public override void _Process(float delta)
     //  {

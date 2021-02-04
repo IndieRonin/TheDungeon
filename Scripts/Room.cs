@@ -1,7 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-
+using EventCallback;
 public class Room
 {
     //The mob inside the room
@@ -22,20 +22,26 @@ public class Room
         }
         else
         {
-            //We go to the conflict resolution 
+            //Set up the conflict resolution event message
+            ConflictResolutionEvent crei = new ConflictResolutionEvent();
+            //Set the party to send in the message
+            crei.party = party;
+            //Set the mob to send in the message
+            crei.mob = mob;
+            //Set the traps to send in the message
+            crei.traps = traps;
+            //Send the event message
+            crei.FireEvent();
 
-            /*
-If the conflict is wn by the party they get the treasure, if they lost the treasure keeps growing
-            */
+            
         }
-
     }
-//If the party wins they get the treasure
+    //If the party wins they get the treasure
     private void GetTreasure()
     {
-        
+
     }
-//If the mob wins the treasure grows
+    //If the mob wins the treasure grows
     private void GrowTreasure()
     {
 

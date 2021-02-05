@@ -4,12 +4,21 @@ using System.Collections.Generic;
 using EventCallback;
 public class Room
 {
+    //The rooms Id
+    int roomID;
     //The mob inside the room
     Mob mob = null;
     //The party of adventurers in the room
     Party party = null;
-    //The traps indise the room
-    Trap[] traps = new Trap[3];
+    //The traps in the room
+    Traps traps = null;
+
+//Override the defualt constructor for the room class
+    public Room(int _roomID)
+    {
+        //Set the rooms id on creation
+        roomID = _roomID;
+    }
 
     private void CheckConflicts()
     {
@@ -32,8 +41,6 @@ public class Room
             crei.traps = traps;
             //Send the event message
             crei.FireEvent();
-
-            
         }
     }
     //If the party wins they get the treasure

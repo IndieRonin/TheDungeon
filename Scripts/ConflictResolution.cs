@@ -19,13 +19,12 @@ public class ConflictResolution : Node
         {
             for (int i = 0; i < crei.traps.Length; i++)
             {
-                if(crei.party)
+                if(crei.party.GetParty())
             }
         }
         else
         {
             for
-
         }
         /*
                1. Take in the rooms part, mob and traps - Done

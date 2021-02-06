@@ -25,7 +25,7 @@ public class Room
         //If the party space is empty we return out of the function
         if (party == null) return;
         //If the mob and the traps are empty but we have a party in the room we give 
-        if (mob == null && traps.Length <= 0)
+        if (mob == null && traps.GetTraps().Count <= 0)
         {
             //The party just gets the treasure and gets out of the dungeon
         }

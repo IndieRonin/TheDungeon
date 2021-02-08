@@ -7,6 +7,10 @@ public class Party
 {
     //The room the party is in at the moment
     int inRoomID;
+    //The treasure the party has with them
+    int treasure;
+    //The max treasure the party wants before heading out of the dungeon
+    int maxTreasure = 500;
 
     //Overide the defualt constructor for the party class
     public Party(int _roomID)
@@ -36,9 +40,19 @@ public class Party
     {
         return Adventurers;
     }
-
+    public void AddTreasure(int amount)
+    {
+        //Add the amount to the treasure
+        treasure += amount;
+    }
+    public int GetTreasure()
+    {
+        //Get the amount of treasure the party has
+        return treasure;
+    }
     private void OnSetPartyRoomIDEvent(SetPartyRoomIDEvent spridei)
     {
+        //Set the parties room id to the new roomID
         if (spridei.oldID == inRoomID)
         {
             inRoomID = spridei.newID;

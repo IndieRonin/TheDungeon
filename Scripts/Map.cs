@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using EventCallback;
 public class Map : Node2D
 {
+    //The positions of the tiles in the map
+    Vector2[,] tilePos = new Vector2[30, 30];
     List<int> roomIDs = new List<int>();
     //The map dictionary, connects the prites with the room scripts
     Dictionary<Room, Node2D> map = new Dictionary<Room, Node2D>();
@@ -13,9 +15,9 @@ public class Map : Node2D
 
     }
 
-    //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-    //  public override void _Process(float delta)
-    //  {
-    //      
-    //  }
+    public void RenderRoom()
+    {
+        
+
+    }
 }

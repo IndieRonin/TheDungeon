@@ -21,7 +21,6 @@ public class Room
         //Set the rooms id on creation
         roomID = _roomID;
     }
-
     private void CheckConflicts()
     {
         bool partyKilled = false, mobKilled = false;

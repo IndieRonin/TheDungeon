@@ -5,7 +5,8 @@ namespace EventCallback
 {
     public abstract class Event<T> where T : Event<T>
     {
-        public string caller;
+        //The class that called the event callback
+        public string callerClass;
         private bool hasFired;
         public delegate void EventListener(T info);
         private static event EventListener listeners;
@@ -22,7 +23,7 @@ namespace EventCallback
         {
             if (hasFired)
             {
-                throw new Exception("The " + caller + " has already fired, to prevent infinite loops you can't refire an event");
+                throw new Exception("The event from " + callerClass + " class has already fired, to prevent infinite loops you can't refire an event");
             }
             hasFired = true;
             if (listeners != null)

@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using EventCallback;
-public class Room
+public class Room : Node2D
 {
     //The rooms Id
     int roomID;

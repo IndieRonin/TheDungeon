@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RoomN.png-f9c61c0bff1d5e108ce3b079b7048afc.stex"
+path="res://.import/10p.png-e717e9a6b767f9e70f4b5120d9de3401.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RoomN.png"
-dest_files=[ "res://.import/RoomN.png-f9c61c0bff1d5e108ce3b079b7048afc.stex" ]
+source_file="res://Sprites/fant_port/32/10p.png"
+dest_files=[ "res://.import/10p.png-e717e9a6b767f9e70f4b5120d9de3401.stex" ]
 
 [params]
 

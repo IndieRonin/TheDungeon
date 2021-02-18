@@ -1,6 +1,15 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+
+//The states for the game main loop
+public enum GameStates
+{
+    MAIN,
+    GAME,
+    MENU
+};
+
 public class Main : Node2D
 {
     //The external list of scenes to instantiate when the game initiates for the first time
@@ -13,21 +22,62 @@ public class Main : Node2D
     [Export]
     List<PackedScene> menuScenes = new List<PackedScene>();
     //The list of nodes that will hold the pre loaded scenes
-    List<Node> nodes = new List<Node>();
+    List<Node> mainNodes = new List<Node>();
+    //The list of nodes that will hold the pre loaded scenes
+    List<Node> gameNodes = new List<Node>();
+    //The list of nodes that will hold the pre loaded scenes
+    List<Node> menuNodes = new List<Node>();
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        //Loop through all the scenes in the list
-        foreach (PackedScene scene in mainScenes)
+        //Check if the main scenes list is not zero 
+        if (mainScenes.Count > 0)
         {
-            //Add the node of the scenes
-            nodes.Add(scene.Instance());
+            //Loop through all the scenes in the list
+            foreach (PackedScene scene in mainScenes)
+            {
+                //Add the node of the scenes
+                mainNodes.Add(scene.Instance());
+            }
+            //Loop through the list of scene nodes and add them to the current scene as children
+            foreach (Node node in mainNodes)
+            {
+                AddChild(node);
+            }
         }
-        //Loop through the list of scene nodes and add them to the current scene as children
-        foreach (Node node in nodes)
+
+        //Check if the game scenes list is not zero 
+        if (gameScenes.Count > 0)
         {
-            AddChild(node);
+            //Loop through all the scenes in the list
+            foreach (PackedScene scene in gameScenes)
+            {
+                //Add the node of the scenes
+                gameNodes.Add(scene.Instance());
+            }
+            //Loop through the list of scene nodes and add them to the current scene as children
+            foreach (Node node in gameNodes)
+            {
+                AddChild(node);
+            }
         }
+
+        //Check if the menu scenes list is not zero 
+        if (menuScenes.Count > 0)
+        {
+            //Loop through all the scenes in the list
+            foreach (PackedScene scene in menuScenes)
+            {
+                //Add the node of the scenes
+                menuNodes.Add(scene.Instance());
+            }
+            //Loop through the list of scene nodes and add them to the current scene as children
+            foreach (Node node in menuNodes)
+            {
+                AddChild(node);
+            }
+        }
+
     }
 }

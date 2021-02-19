@@ -13,6 +13,7 @@ public class Menu : Control
     }
     public void OnStartButtonPressed()
     {
+        this.Visible = false;
 
     }
     public void OnOptionsButtonPressed()

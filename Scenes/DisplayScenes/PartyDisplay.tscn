@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Display Scripts/PartyDisplay.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/fant_port/32/4p.png" type="Texture" id=2]
@@ -7,9 +7,18 @@
 [ext_resource path="res://Sprites/fant_port/32/2p.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/fant_port/32/6p.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/fant_port/32/8p.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/fant_port/32/9p.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/fant_port/32/12p.png" type="Texture" id=9]
 
 [node name="PartyDisplay" type="Node2D"]
 script = ExtResource( 1 )
+wizardPortrait = [ ExtResource( 6 ) ]
+sorcererPortrait = [ ExtResource( 2 ) ]
+fighterPortrait = [ ExtResource( 9 ) ]
+barbarianPortrait = [ ExtResource( 7 ) ]
+clericPortrait = [ ExtResource( 4 ) ]
+paladinPortrait = [ ExtResource( 8 ) ]
+rangerPortrait = [ ExtResource( 5 ) ]
 
 [node name="Adventurer1" type="Sprite" parent="."]
 position = Vector2( 80, -16 )

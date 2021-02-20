@@ -16,6 +16,25 @@ public class Room
     int roomID;
     //The room type
     RoomType type;
+    //The public accesor for hte rooms type
+    public RoomType Type
+    {
+        get { return type; }
+        set
+        {
+            //If the new value is not equal to the old value
+            if (type != value)
+            {
+                //Set the new type of the room
+                type = value;
+                //Send a message to the room listeners
+                SetRoomDisplayEvent srde = new SetRoomDisplayEvent();
+                srde.newType = type;
+                srde.FireEvent();
+            }
+        }
+    }
+
     //The mob inside the room
     Mob mob = null;
     //The party of adventurers in the room
@@ -33,15 +52,9 @@ public class Room
         //Set the rooms id on creation
         roomID = _roomID;
         //Set the rooms type
-        type = newType;
-        //Register the get room display info event listener
-        GetRoomDisplayInfoEvent.RegisterListener(OnGetRoomDisplayInfoEvent);
+        Type = newType;
     }
 
-    private void OnGetRoomDisplayInfoEvent(GetRoomDisplayInfoEvent grdie)
-    {
-
-    }
 
     private void CheckConflicts()
     {

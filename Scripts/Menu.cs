@@ -22,6 +22,7 @@ public class Menu : Control
     }
     public void OnExitButtonPressed()
     {
-
+        //Exit Game
+        GetTree().Quit();
     }
 }

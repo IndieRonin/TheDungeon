@@ -2,10 +2,20 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using EventCallback;
+
+public enum RoomType
+{
+    CORE,
+    ENTRANCE,
+    BLUEPRINT,
+    ROOM
+};
 public class Room
 {
     //The rooms Id
     int roomID;
+    //The room type
+    RoomType type;
     //The mob inside the room
     Mob mob = null;
     //The party of adventurers in the room
@@ -14,13 +24,25 @@ public class Room
     Traps traps = null;
     //Tge treasure in the room
     int treasure = 0;
+    //The entrances to the room: north, west, south, east
+    bool n = false, w = false, s = false, e = false;
 
     //Override the defualt constructor for the room class
-    public Room(int _roomID)
+    public Room(int _roomID, RoomType newType)
     {
         //Set the rooms id on creation
         roomID = _roomID;
+        //Set the rooms type
+        type = newType;
+        //Register the get room display info event listener
+        GetRoomDisplayInfoEvent.RegisterListener(OnGetRoomDisplayInfoEvent);
     }
+
+    private void OnGetRoomDisplayInfoEvent(GetRoomDisplayInfoEvent grdie)
+    {
+
+    }
+
     private void CheckConflicts()
     {
         bool partyKilled = false, mobKilled = false;

@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Display Scripts/RoomDisplay.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/RoomBlueprint.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/RoomBlueprint50Op.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/DungeonCore.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/DungeonEntrance.png" type="Texture" id=5]
 
 [node name="RoomDisplay" type="Node2D"]
 script = ExtResource( 1 )
+roomBlueprints = [ ExtResource( 3 ) ]
+roomBuilt = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ]
 
-[node name="RoomN" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+[node name="RoomSprite" type="Sprite" parent="."]

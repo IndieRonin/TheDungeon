@@ -19,16 +19,19 @@ public class PartyDisplay : Node2D
     [Export]
     List<Texture> rangerPortrait = new List<Texture>();
 
-
+    //Get the party list
+    //Iterate through the list 
+    //Get the adventurer type from the party list
+    //Set the portriat of 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        SetPartyDisplayEvent.RegisterListener(OnSetPartyDisplayEvent);
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+//The method to be called if there is a message for the party display
+    private void OnSetPartyDisplayEvent(SetPartyDisplayEvent spde)
+    {
+        
+    }
 }

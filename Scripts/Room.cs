@@ -35,10 +35,52 @@ public class Room
         }
     }
 
-    //The mob inside the room
-    Mob mob = null;
-    //The party of adventurers in the room
-    Party party = null;
+    //The mob inside the room with the methods to call when the mob is changed
+    Mob mob
+    {
+        get
+        {
+            //Returns the mob for the requester, the current mos is private so only accesable in the class it was defined in
+            return mob;
+        }
+        set
+        {
+            //If the mob is not the same as the current mob then the setting is done
+            if (mob != value)
+            {
+                //Set the mob to the new incomming mob
+                mob = value;
+                //Send the message to the mob display event
+                SetMobDisplayEvent smde = new SetMobDisplayEvent();
+                smde.callerClass = "Room - mob varaible setter";
+                smde.mob = mob;
+                smde.FireEvent();
+            }
+        }
+    }
+    //The party of adventurers in the room with the methods to call when the party is changed
+    Party party
+    {
+        get
+        {
+            return party;
+        }
+        set
+        {
+            //If the party is not the same as the current party then the setting is done
+            if (party != value)
+            {
+                //Set the party to the new incomming value
+                party = value;
+                //Call the event message to set party display event to update the party display
+                SetPartyDisplayEvent spde = new SetPartyDisplayEvent();
+                spde.callerClass = "Room - party variable setter";
+                spde.party = party;
+                spde.FireEvent();
+            }
+        }
+    }
+
     //The traps in the room
     Traps traps = null;
     //Tge treasure in the room

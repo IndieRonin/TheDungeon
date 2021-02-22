@@ -9,7 +9,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 128, 128 )
 
-[node name="Room" type="Node2D"]
+[node name="Room" type="Node2D" groups=[
+"Room",
+]]
 
 [node name="RoomDisplay" parent="." instance=ExtResource( 5 )]
 

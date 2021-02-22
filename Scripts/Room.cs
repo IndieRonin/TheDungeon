@@ -29,6 +29,7 @@ public class Room
                 type = value;
                 //Send a message to the room listeners
                 SetRoomDisplayEvent srde = new SetRoomDisplayEvent();
+                srde.callerClass = "Room - room type setter";
                 srde.newType = type;
                 srde.FireEvent();
             }
@@ -38,11 +39,7 @@ public class Room
     //The mob inside the room with the methods to call when the mob is changed
     Mob mob
     {
-        get
-        {
-            //Returns the mob for the requester, the current mos is private so only accesable in the class it was defined in
-            return mob;
-        }
+        get { return mob; }
         set
         {
             //If the mob is not the same as the current mob then the setting is done
@@ -61,10 +58,7 @@ public class Room
     //The party of adventurers in the room with the methods to call when the party is changed
     Party party
     {
-        get
-        {
-            return party;
-        }
+        get { return party; }
         set
         {
             //If the party is not the same as the current party then the setting is done
@@ -83,6 +77,7 @@ public class Room
 
     //The traps in the room
     Traps traps = null;
+
     //Tge treasure in the room
     int treasure = 0;
     //The entrances to the room: north, west, south, east

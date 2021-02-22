@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Display Scripts/PartyDisplay.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/fant_port/32/4p.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/fant_port/32/3p.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/fant_port/32/1p.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/fant_port/32/2p.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/fant_port/32/6p.png" type="Texture" id=6]
@@ -12,6 +11,9 @@
 
 [node name="PartyDisplay" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 wizardPortrait = [ ExtResource( 6 ) ]
 sorcererPortrait = [ ExtResource( 2 ) ]
 fighterPortrait = [ ExtResource( 9 ) ]
@@ -22,24 +24,18 @@ rangerPortrait = [ ExtResource( 5 ) ]
 
 [node name="Adventurer1" type="Sprite" parent="."]
 position = Vector2( 80, -16 )
-texture = ExtResource( 4 )
 
 [node name="Adventurer2" type="Sprite" parent="."]
 position = Vector2( 80, 32 )
-texture = ExtResource( 5 )
 
 [node name="Adventurer3" type="Sprite" parent="."]
 position = Vector2( 80, 80 )
-texture = ExtResource( 3 )
 
 [node name="Adventurer4" type="Sprite" parent="."]
 position = Vector2( 32, 32 )
-texture = ExtResource( 6 )
 
 [node name="Adventurer5" type="Sprite" parent="."]
 position = Vector2( 32, -16 )
-texture = ExtResource( 2 )
 
 [node name="Adventurer6" type="Sprite" parent="."]
 position = Vector2( 32, 80 )
-texture = ExtResource( 7 )

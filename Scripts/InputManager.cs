@@ -36,7 +36,10 @@ public class InputManager : Node
                     Node2D hitNode = touchRay.GetCollider() as Node2D;
                     //Get the position where the screen was touched
                     touchStart = screenTouch.Position;
-                    GD.Print("InputManager - _UnhandledInput: Touch/Click ray hit a collision");
+                    if (hitNode.IsInGroup("Room"))
+                    {
+
+                    }
                 }
             }
             else

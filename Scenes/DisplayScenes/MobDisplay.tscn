@@ -8,6 +8,9 @@
 
 [node name="MobDisplay" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 orcsPortrait = [ ExtResource( 4 ) ]
 skeletonPortrait = [ ExtResource( 2 ) ]
 cyclopsPortrait = [ ExtResource( 5 ) ]
@@ -15,24 +18,18 @@ slimePortrait = [ ExtResource( 3 ) ]
 
 [node name="Monster1" type="Sprite" parent="."]
 position = Vector2( -32.2704, -15.6862 )
-texture = ExtResource( 4 )
 
 [node name="Monster2" type="Sprite" parent="."]
 position = Vector2( -80, -16 )
-texture = ExtResource( 4 )
 
 [node name="Monster3" type="Sprite" parent="."]
 position = Vector2( -32, 32 )
-texture = ExtResource( 4 )
 
 [node name="Monster4" type="Sprite" parent="."]
 position = Vector2( -80, 32 )
-texture = ExtResource( 4 )
 
 [node name="Monster5" type="Sprite" parent="."]
 position = Vector2( -32, 80 )
-texture = ExtResource( 2 )
 
 [node name="Monster6" type="Sprite" parent="."]
 position = Vector2( -80, 80 )
-texture = ExtResource( 2 )

@@ -2,10 +2,8 @@ using Godot;
 using System;
 using EventCallback;
 
-public class Menu : Control
+public class Menu : CanvasLayer
 {
-
-
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -13,7 +11,6 @@ public class Menu : Control
     }
     public void OnStartButtonPressed()
     {
-        this.Visible = false;
 
     }
     public void OnOptionsButtonPressed()

@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/ActionMenuFont.tres" type="DynamicFont" id=1]
+
+[node name="ActionMenu" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -67.5
+margin_top = -119.0
+margin_right = 67.5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnRoom" type="Button" parent="VBoxContainer"]
+margin_right = 135.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "Spawn Room"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnMob" type="Button" parent="VBoxContainer"]
+margin_top = 41.0
+margin_right = 135.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 1 )
+text = "Spawn Mob"
+
+[node name="SpawnTrap" type="Button" parent="VBoxContainer"]
+margin_top = 82.0
+margin_right = 135.0
+margin_bottom = 119.0
+custom_fonts/font = ExtResource( 1 )
+text = "Spawn Trap"
+__meta__ = {
+"_edit_use_anchors_": false
+}

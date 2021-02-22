@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Scripts/CameraManager.cs" type="Script" id=1]
 
-[node name="Node2D" type="Camera2D"]
+[node name="Camera2D" type="Camera2D"]
+anchor_mode = 0
 current = true
 script = ExtResource( 1 )

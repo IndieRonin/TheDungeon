@@ -14,6 +14,8 @@ public class Room
 {
     //The rooms Id
     int roomID;
+    //The maximum traps allowed in the room
+    int maxTraps = 3;
     //The room type
     RoomType type;
     //The public accesor for hte rooms type
@@ -76,7 +78,14 @@ public class Room
     }
 
     //The traps in the room
-    Traps traps = null;
+    Traps traps
+    {
+        get{return traps;}
+        set
+        {
+if(traps)
+        }
+    }
 
     //Tge treasure in the room
     int treasure = 0;

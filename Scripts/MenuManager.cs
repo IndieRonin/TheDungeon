@@ -2,7 +2,7 @@ using Godot;
 using System;
 using EventCallback;
 
-public class Menu : CanvasLayer
+public class MenuManager : CanvasLayer
 {
     //Menus for the game
     Control main;
@@ -13,18 +13,18 @@ public class Menu : CanvasLayer
     public override void _Ready()
     {
         //Assigning the nodes in the menu scene to the nodes in the script
-        main.GetNode<Control>("Main");
-        options.GetNode<Control>("Options");
+        main = GetNode<Control>("Main");
+        options = GetNode<Control>("Options");
         //Set the options menu to not be visible after instantiation
         options.Visible = false;
-        action.GetNode<Control>("Action");
+        action = GetNode<Control>("Action");
         //Set the action menu to not be visible after instantiation
         action.Visible = false;
-
     }
     public void OnStartButtonPressed()
     {
-
+        //When start is presses hide the main menu
+        main.Visible = false;
     }
     public void OnOptionsButtonPressed()
     {

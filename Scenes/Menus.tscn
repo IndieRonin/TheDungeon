@@ -8,6 +8,79 @@
 [node name="Menus" type="CanvasLayer"]
 script = ExtResource( 4 )
 
+[node name="Action" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Action"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -67.5
+margin_top = -119.0
+margin_right = 67.5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnRoom" type="Button" parent="Action/VBoxContainer"]
+margin_right = 135.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Spawn Room"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnMob" type="Button" parent="Action/VBoxContainer"]
+margin_top = 41.0
+margin_right = 135.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Spawn Mob"
+
+[node name="SpawnTrap" type="Button" parent="Action/VBoxContainer"]
+margin_top = 82.0
+margin_right = 135.0
+margin_bottom = 119.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Spawn Trap"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fullscreen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Main" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -74,76 +147,6 @@ custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Exit"
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Options" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer"]
-margin_right = 1280.0
-margin_bottom = 48.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Fullscreen"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Action" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Action"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -67.5
-margin_top = -119.0
-margin_right = 67.5
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SpawnRoom" type="Button" parent="Action/VBoxContainer"]
-margin_right = 135.0
-margin_bottom = 37.0
-custom_fonts/font = ExtResource( 3 )
-text = "Spawn Room"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SpawnMob" type="Button" parent="Action/VBoxContainer"]
-margin_top = 41.0
-margin_right = 135.0
-margin_bottom = 78.0
-custom_fonts/font = ExtResource( 3 )
-text = "Spawn Mob"
-
-[node name="SpawnTrap" type="Button" parent="Action/VBoxContainer"]
-margin_top = 82.0
-margin_right = 135.0
-margin_bottom = 119.0
-custom_fonts/font = ExtResource( 3 )
-text = "Spawn Trap"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -57,11 +57,4 @@ public class Map : Node2D
             }
         }
     }
-    //Draws the room sprite in the correct place
-    private void DrawRoom()
-    {
-
-    }
-
-
 }

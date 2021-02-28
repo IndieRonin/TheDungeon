@@ -23,6 +23,22 @@ public class InputManager : Node
             //If the screenTouch was pressed
             if (screenTouch.Pressed)
             {
+                if (screenTouch.Index > 1)
+                {
+                    //CALL THE DREADED PINCH EVEN TO ZOOM THE SCREEN!!!!!
+                }
+                else
+                {
+
+                }
+                /*
+
+                */
+            }
+            else
+            {
+                //If the touch is released we bring up the build menu
+                //BRING ME THE TOUCH MENU PEASANTS 28/02/2021 - Auther: IndieRonin
                 //Enadble the touchRay
                 touchRay.Enabled = true;
                 //Set its current position to the taps position
@@ -38,12 +54,10 @@ public class InputManager : Node
                     touchStart = screenTouch.Position;
                     if (hitNode.IsInGroup("Room"))
                     {
-
+                        GD.Print("A room was released on - that sounds dirty");
                     }
                 }
-            }
-            else
-            {
+
                 //Get the position where the screen touch was released
                 touchEnd = screenTouch.Position;
                 //Where the touch was released used for dragging or to check if and object with a collider on was clicked on

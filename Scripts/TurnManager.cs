@@ -3,20 +3,36 @@ using System;
 
 public enum TurnStates
 {
-    CALCULATE_RESOURCES,
+    PLAYER_TURN,
     PARTY_MOVE,
     CONFLICT_RESOLUTION,
-    PLAYER_TURN
+    CALCULATE_RESOURCES
 };
 public class TurnManager : Node
 {
     //The states for the turn manager to loop through
     TurnStates state;
 
-    // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        state = TurnStates.PLAYER_TURN;
+    }
+
+    public override void _Process(float delta)
+    {
+        base._Process(delta);
+        switch (state)
+        {
+            case TurnStates.PLAYER_TURN:
+                break;
+            case TurnStates.PARTY_MOVE:
+                //Loop through all the parties and move those with the move flag status set
+                break;
+            case TurnStates.CONFLICT_RESOLUTION:
+                break;
+            case TurnStates.CALCULATE_RESOURCES:
+                break;
+        }
     }
 
     public void OnChangeState(TurnStates newState)

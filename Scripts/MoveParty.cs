@@ -1,20 +1,19 @@
 using Godot;
 using System;
-
-public class CameraManager : Camera2D
+using EventCallback;
+public class MoveParty : Node
 {
-    //The minimum zoom level for the camera
-    float minZoom = .5f;
-    //The maximum zoom level for hte camera
-    float maxZoom = 2f;
-    //The speed of the zoom
-    float zoomSpeed = 0.05f;
-    //The sensitivity of the zooming
-    float zoomSensitivity = 10;
-
+    // Declare member variables here. Examples:
+    // private int a = 2;
+    // private string b = "text";
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
+    {
+        PartyMoveEvent.RegisterListener(OnPartyMoveEvent);
+    }
+
+    private void OnPartyMoveEvent(PartyMoveEvent pme)
     {
 
     }
